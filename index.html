@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Кураж Тур</title>
+
     
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,15 +15,451 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/test/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/test/assets/index-b7508da3.css">
+    <link rel="stylesheet" href="/test/assets/index-67db1534.css">
   </head>
   <body>
-    
+    <header class="header">
+  <div class="container">
+    <div class="header-group">
+      <div class="header-logo">
+        <img src="data:image/png;base64,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" alt="logo" width="92" />
+      </div>
+
+      <div class="header-burger" id="is-open-mobile">
+        <svg class="header-contact-svg" width="32" height="32">
+          <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-burger"></use>
+        </svg>
+      </div>
+
+      <nav class="header-nav">
+        <div class="header-info">
+          <ul class="header-contact">
+            <li>
+              <svg class="header-contact-svg" width="32" height="32">
+                <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-map"></use>
+              </svg>
+              <p>г. Харьков, ул. Мироносицкая 10а</p>
+            </li>
+            <li>
+              <svg class="header-contact-svg" width="32" height="32">
+                <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-phone"></use>
+              </svg>
+              <p>
+                <span class="header-number">+38 (099) 990-81-00</span> (viber,
+                telegram)
+              </p>
+            </li>
+          </ul>
+
+          <div class="header-social">
+            <svg class="header-social-svg" width="33" height="33">
+              <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-facebook"></use>
+            </svg>
+
+            <svg class="header-social-svg" width="30" height="30">
+              <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-instagram"></use>
+            </svg>
+          </div>
+        </div>
+        <ul class="header-menu">
+          <li class="header-menu-team"><a href="#">Главная</a></li>
+          <li class="header-menu-team active-arrow">
+            <a href="#"
+              >Туры
+              <svg class="header-menu-svg" width="30" height="30">
+                <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-arrow"></use>
+              </svg>
+            </a>
+
+            <ul class="dropdown">
+              <li><a href="#">Горящие туры</a></li>
+              <li><a href="#">Поиск тура</a></li>
+              <li><a href="#">Туры по Украине</a></li>
+              <li><a href="#">Экскурсионные туры</a></li>
+              <li><a href="#">Week end туры</a></li>
+            </ul>
+          </li>
+          <li class="header-menu-team"><a href="#">Страны</a></li>
+          <li class="header-menu-team active-arrow">
+            <a href="#"
+              >Услуги
+              <svg class="header-menu-svg" width="30" height="30">
+                <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-arrow"></use>
+              </svg>
+            </a>
+
+            <ul class="dropdown">
+              <li><a href="#">Авиабилеты</a></li>
+              <li><a href="#">Визовая поддержка</a></li>
+              <li><a href="#">Индивидуальный трансфер</a></li>
+              <li><a href="#">Подарочные сертификаты</a></li>
+              <li><a href="#">Бронирование отелей и апартаментов</a></li>
+              <li><a href="#">Как забронировать и оплатить тур</a></li>
+            </ul>
+          </li>
+          <li class="header-menu-team"><a href="#">О компании</a></li>
+          <li class="header-menu-team"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-block">
+      <div class="aaa">
+        <h1 class="header-block-text">
+          Лучшие предложения по солнечному Египту из Харькова
+        </h1>
+        <button class="header-block-button" type="button">
+          Получить предложение
+        </button>
+      </div>
+    </div>
+
+    <div class="dots"></div>
+  </div>
+</header>
+
+    <div class="backdrop" id="mobile-menu">
+  <div class="modal-container">
+    <div class="header-logo">
+      <img src="data:image/png;base64,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" alt="logo" width="92" />
+    </div>
+    <button class="modal-btn-close" type="button" id="mobile-close-btn">
+      <svg class="btn-close" width="32" height="32">
+        <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="modal-menu">
+    <ul class="modal-menu-container">
+      <li class="modal-menu-team"><a href="#">Главная</a></li>
+      <li class="modal-menu-team active-arrow"><a href="#">Туры </a></li>
+      <li class="modal-menu-team"><a href="#">Страны</a></li>
+      <li class="modal-menu-team active-arrow"><a href="#">Услуги </a></li>
+      <li class="modal-menu-team"><a href="#">О компании</a></li>
+      <li class="modal-menu-team"><a href="#">Контакты</a></li>
+    </ul>
+
+    <div class="modal-info">
+      <ul class="modal-contact">
+        <li>
+          <p>г. Харьков, ул. Мироносицкая 10а</p>
+        </li>
+        <li>
+          <p>
+            <span class="modal-number">+38 (099) 990-81-00</span> (viber,
+            telegram)
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 
     <main>
-      <h1>hello</h1>
+      <section class="tour">
+  <!-- <div class="tour-subtitle">
+    <p><a href="#">Горящие туры</a></p>
+    <p><a href="#">Популярные туры</a></p>
+  </div>
+  <div class="tour-carousel">
+    <div class="tour-card">
+      <div class="tour-image">
+        <img src="https://via.placeholder.com/150" alt="Cyrene Sharm Hotel" />
+      </div>
+      <div class="tour-details">
+        <h2>8 марта в Cyrene Sharm hotel</h2>
+        <p class="dates">(12.03.2018 — 19.03.2018)</p>
+        <p>Перелёт, питание по системе all inclusive, трансфер</p>
+        <div class="tour-price">
+          <span>1 259 грн</span>
+          <p class="per-person">/ за 1 человека</p>
+        </div>
+      </div>
+      <div class="tour-arrow">
+        <span>&#10140;</span>
+      </div>
+    </div>
+
+    <div class="tour-card">
+      <div class="tour-image">
+        <img src="https://via.placeholder.com/150" alt="Cyrene Sharm Hotel" />
+      </div>
+      <div class="tour-details">
+        <h2>8 марта в Cyrene Sharm hotel</h2>
+        <p class="dates">(12.03.2018 — 19.03.2018)</p>
+        <p>Перелёт, питание по системе all inclusive, трансфер</p>
+        <div class="tour-price">
+          <span>1 259 грн</span>
+          <p class="per-person">/ за 1 человека</p>
+        </div>
+      </div>
+      <div class="tour-arrow">
+        <span>&#10140;</span>
+      </div>
+    </div>
+
+    <div class="tour-card">
+      <div class="tour-image">
+        <img src="https://via.placeholder.com/150" alt="Cyrene Sharm Hotel" />
+      </div>
+      <div class="tour-details">
+        <h2>8 марта в Cyrene Sharm hotel</h2>
+        <p class="dates">(12.03.2018 — 19.03.2018)</p>
+        <p>Перелёт, питание по системе all inclusive, трансфер</p>
+        <div class="tour-price">
+          <span>1 259 грн</span>
+          <p class="per-person">/ за 1 человека</p>
+        </div>
+      </div>
+      <div class="tour-arrow">
+        <span>&#10140;</span>
+      </div>
+    </div>
+  </div> -->
+  <div class="container">
+    <div class="tours-header">
+      <span class="hot-tours active">Горящие туры</span>
+      <span class="popular-tours">Популярные туры</span>
+    </div>
+    <div class="tours-container">
+      <div class="tour-card">
+        <div class="tour-image">
+          <img
+            srcset="/test/assets/beach-04e3b463.jpg 288w, /test/assets/beach@2x-bed27c63.jpg 576w, /test/assets/beach-04e3b463.jpg 356w, /test/assets/beach@2x-bed27c63.jpg 712w, /test/assets/beach-04e3b463.jpg 360w, /test/assets/beach@2x-bed27c63.jpg 720w"
+            sizes="(min-width: 1280px) 360px, (min-width: 768px) 356px, (max-width: 767px) 288px "
+            src="/test/assets/beach-04e3b463.jpg"
+            alt="Cyrene Sharm Hotel"
+          />
+        </div>
+
+        <div class="tour-details">
+          <h2>8 марта в Cyrene Sharm hotel</h2>
+          <p class="dates">(12.03.2018 — 19.03.2018)</p>
+          <p>Перелёт, питание по системе all inclusive, трансфер</p>
+          <div class="tour-price">
+            <span>1 259 грн</span>
+            <p class="per-person">/ за 1 человека</p>
+          </div>
+        </div>
+        <div class="tour-arrow">
+          <span>
+            <svg class="tour-arrow-svg" width="30" height="30">
+              <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-arrow"></use>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="tour-card">
+        <div class="tour-image">
+          <img
+            srcset="/test/assets/sea-cd6a5dd9.jpg 288w, /test/assets/sea@2x-c8b1d487.jpg 576w, /test/assets/sea-cd6a5dd9.jpg 356w, /test/assets/sea@2x-c8b1d487.jpg 712w, /test/assets/sea-cd6a5dd9.jpg 360w, /test/assets/sea@2x-c8b1d487.jpg 720w"
+            sizes="(min-width: 1280px) 360px, (min-width: 768px) 356px, (max-width: 767px) 288px "
+            src="../img/sea.jpg"
+            alt="Cyrene Sharm Hotel"
+          />
+        </div>
+        <div class="tour-details">
+          <h2>8 марта в Cyrene Sharm hotel</h2>
+          <p class="dates">(12.03.2018 — 19.03.2018)</p>
+          <p>Перелёт, питание по системе all inclusive, трансфер</p>
+          <div class="tour-price">
+            <span>1 259 грн</span>
+            <p class="per-person">/ за 1 человека</p>
+          </div>
+        </div>
+        <div class="tour-arrow">
+          <span>
+            <svg class="tour-arrow-svg" width="30" height="30">
+              <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-arrow"></use>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="tour-card">
+        <div class="tour-image">
+          <img
+            srcset="/test/assets/beach-04e3b463.jpg 288w, /test/assets/beach@2x-bed27c63.jpg 576w, /test/assets/beach-04e3b463.jpg 356w, /test/assets/beach@2x-bed27c63.jpg 712w, /test/assets/beach-04e3b463.jpg 360w, /test/assets/beach@2x-bed27c63.jpg 720w"
+            sizes="(min-width: 1280px) 360px, (min-width: 768px) 356px, (max-width: 767px) 288px "
+            src="../img/beach.jpg"
+            alt="Cyrene Sharm Hotel"
+          />
+        </div>
+        <div class="tour-details">
+          <h2>8 марта в Cyrene Sharm hotel</h2>
+          <p class="dates">(12.03.2018 — 19.03.2018)</p>
+          <p>Перелёт, питание по системе all inclusive, трансфер</p>
+          <div class="tour-price">
+            <span>1 259 грн</span>
+            <p class="per-person">/ за 1 человека</p>
+          </div>
+        </div>
+        <div class="tour-arrow">
+          <span>
+            <svg class="tour-arrow-svg" width="30" height="30">
+              <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-arrow"></use>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="tour-card">
+        <div class="tour-image">
+          <img
+            srcset="/test/assets/sea-cd6a5dd9.jpg 288w, /test/assets/sea@2x-c8b1d487.jpg 576w, /test/assets/sea-cd6a5dd9.jpg 356w, /test/assets/sea@2x-c8b1d487.jpg 712w, /test/assets/sea-cd6a5dd9.jpg 360w, /test/assets/sea@2x-c8b1d487.jpg 720w"
+            sizes="(min-width: 1280px) 360px, (min-width: 768px) 356px, (max-width: 767px) 288px "
+            src="../img/sea.jpg"
+            alt="Cyrene Sharm Hotel"
+          />
+        </div>
+        <div class="tour-details">
+          <h2>8 марта в Cyrene Sharm hotel</h2>
+          <p class="dates">(12.03.2018 — 19.03.2018)</p>
+          <p>Перелёт, питание по системе all inclusive, трансфер</p>
+          <div class="tour-price">
+            <span>1 259 грн</span>
+            <p class="per-person">/ за 1 человека</p>
+          </div>
+        </div>
+        <div class="tour-arrow">
+          <span>
+            <svg class="tour-arrow-svg" width="30" height="30">
+              <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-arrow"></use>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="about-us">
+  <div class="container">
+    <h2 class="about-us-title">НАШИ ПРЕИМУЩЕСТВА</h2>
+    <div class="about-us-container">
+      <img
+        srcset="/test/assets/aqualung-5f92a5b9.jpg 288w, /test/assets/aqualung@2x-e4f6a6ee.jpg 576w, /test/assets/aqualung-5f92a5b9.jpg 356w, /test/assets/aqualung@2x-e4f6a6ee.jpg 712w, /test/assets/aqualung-5f92a5b9.jpg 360w, /test/assets/aqualung@2x-e4f6a6ee.jpg 720w"
+        sizes="(min-width: 1280px) 360px, (min-width: 768px) 356px, (max-width: 767px) 288px "
+        src="/test/assets/aqualung-5f92a5b9.jpg"
+        alt="aqualung"
+      />
+      <p class="scrollable-text">
+        Очень долго подбирали разные варианты для того, чтобы отпраздновать свой
+        юбилейный День рождения в путешествии и не могли определиться... Решили
+        обратиться за помощью в турагенство. Гульнара, выслушав все пожелания,
+        предложила отдых в Турции, отель Justiniano Club Park Conti 5* в
+        Окурджалар возле Аланьи. Мы очень благодарны ей за предложенный
+        вариант!!!! Отдых получился отличный! Отель с большой ухоженной
+        территорией, внимательный обслуживающий персонал. Отличный номер с видом
+        на море. Очень долго подбирали разные варианты для того, чтобы
+        отпраздновать свой юбилейный День рождения в путешествии и не могли
+        определиться... Решили обратиться за помощью в турагенство. Гульнара,
+        выслушав все пожелания, предложила отдых в Турции, отель Justiniano Club
+        Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за
+        предложенный вариант!!!! Отдых получился отличный! Отель с большой
+        ухоженной территорией, внимательный обслуживающий персонал. Отличный
+        номер с видом на море. Очень долго подбирали разные варианты для того,
+        чтобы отпраздновать свой юбилейный День рождения в путешествии и не
+        могли определиться... Решили обратиться за помощью в турагенство.
+        Гульнара, выслушав все пожелания, предложила отдых в Турции, отель
+        Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень
+        благодарны ей за предложенный вариант!!!! Отдых получился отличный!
+        Отель с большой ухоженной территорией, внимательный обслуживающий
+        персонал. Отличный номер с видом на море.
+      </p>
+    </div>
+  </div>
+</section>
+
+      <section class="ofer">
+  <div class="container">
+    <div class="ofer-container">
+      <h1 class="ofer-title">Хочу предложение по туру</h1>
+      <form class="ofer-tour-form" id="tour-form">
+        <input
+          class="ofer-tour-team"
+          type="text"
+          id="name"
+          placeholder="Имя"
+          required
+        />
+        <input
+          class="ofer-tour-team"
+          type="email"
+          id="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          class="ofer-tour-team"
+          type="tel"
+          id="phone"
+          placeholder="Телефон"
+          required
+        />
+        <select class="ofer-tour-country" id="country" required>
+          <option value="">Страна тура</option>
+          <option value="turkey">Турция</option>
+          <option value="egypt">Египет</option>
+          <option value="sri-lanka">Шри-Ланка</option>
+          <option value="dominican">Доминикана</option>
+        </select>
+        <button class="ofer-btn" type="submit">Получить предложение</button>
+      </form>
+    </div>
+  </div>
+</section>
 
     </main>
+
+    <footer>
+  <div class="container">
+    <div class="footer-logo">
+      <span class="footer-logo-block">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABRCAYAAABfccGGAAAN2UlEQVR4nO1bCXAT1xn+Vje+L2wOG4i4zWXGhDQE2pQRDARIJ00TpgyhTEjFcOQYjtikGSiTAzNtwwQSrpCLEhLACc3VBuzUMDFuGuwADjfI5o4NPrBkCR0rbWdXb52n1cqWQZZEqm9mx9r/vfe////27f/e+9+awc8ATU1NiRs3blxRUVHxEMMw3JgxY75etGjRq5mZmU3R5p0yCmy4Y5jN5nf279+/8JatpUdrq7nHqVNnxx05cmR4dXX1zrvctejD+fPns/Py8hy/nTaYu7BfyV0sUXFPPDqAy8vLYw8fPjwq2gxWRIENd4Ta2tphADTjRpiRluxGahKLX45u4VUqSVlUQRUtxlitVu2uXbvmVFdXj1er1a6JEyfunjp16v6O2nEcJ8xDCoYLWBZNiBrCly9fvq2iomK2eF9SUjJv48aNTy9cuPCNyFoWWkRFSCkvL7+voqLi9wNzbHhj2VmsWViDeJ0b27dvf7G1tVUXBSaGDFFB+MmTJ+/lY+7MSdcxcqAND4wy44FRLbDb7Vkmk6lfFJgYMkTLpCnEWiW1SFUpvTGZ47i7fmKn8bNy5m5AjPAwI0Z4mBEjPMyIER5mxAgPM6JmpxksysrKJuzcufPppqamntnZ2ecOHz5cd3dY7kXUE75hw4aiJUuWtLjdbqXZbE5asmSJgeM8WqUCMJlM46PAxE4hKgl3scCZS92E31VVVTPoMp3Gjb8+a8LAHDsOHUvCS+/0RRTmqAIiKmP4N0dSYLoSh9x7rHhz+VlsXXEGvxzdLJSNGGDFyAE2dNN6YBh7EzlZjojb2xlEJeG1P3rzVQ9PaMCIATYM6XcLjxtuCDKlwjcNK6YA7hZEnPDTp08PKC4unu8jJBwqKOtUt2GpxWJJvFP7Qo2IEl5XV5e6ePHiz69fv94lJzObNm1aU1lZmdcVum8XESO8sbExadGiRZ8q6y1DZtzqIcgcTt/Jz+PxTqD8xXqIjGPaZPzFkbdBNrSwnpQVK1bsrK+vT+t6j4JDxFYpK1eu3GAymSZsNY/GKZVFkLlYBZrMKnx/JkG4/8uOHLy2M0f4LRJ7+GQipj47sk2Pi/U+pH99myZEopmTbrSV/cHWB8X1V4cWFBS8BeDRcPoXCBEZ4WVlZb86dOjQrDnWPrjXldomv1yvwR9fGYQfTAlIiGORkcIKh8L8lZbMIivNicxUV5uMvzLTXEhPdqKuUYN3v+iJ2auGtD2w7h4tnmsdgKNHjz68ffv2OZHwVYqIjPD33ntvWTbbTbXIqveRf1zWHW63AlPHNeL52Zd9DiSkYJRJ6JY+HYwyARzHoqGhEW9sv4IvDmrQcFPTVvs39p74sNsV1ebNm1+xWCy7ExMT7WFyUxZhH+G1tbU9jx07NmmOLQcaSfc82TxmGm60SzYPpSYTSl1fKNTpUGqykNUrF6ufn4iHHkzwqacAg7m2PrDZbNkHDx6cGHqPOoewE/7JJ588meBRaqfbewasY7F2/EEYe+s8bPXvw1a/HbbrH8LRUg6GYfDC4nykp3h86hocmejh1uLAgQMRj+Nh/9RNo9H8bcQNde/pjp8IP6ZuwbfaJmQkO2FzKHGiJh490hwwW1W40az2uewOBZIT3UI7zm3xXuxNuB2XoNRmQxeXibOmepy74MR4ZzqGs0lQgkG9woGvW0yply5dej3cPtMIawxvaGhINBgMIx9h9bLl/Kk9T/aB71NQuLG/bB3+g5+3XzyD/tn+oZjztAp/+/b2ukVvSn/hTMMOy+WcmpqaXnq9/lpoPOo8wkr4tWvXegPQ9mXjfOTdOO+LxiehVj11EQ/sbUbl5SQ4Wd+I96NFi9P18SirSkH/bP+sLD95QpgLvEvFOO4n94awfGznlDU1NYN5U7rEwSAQVsKbm5uFOJLGaXzkfdzezGDNVZ0wWd43xIIxOWa/9k02FRYU5+Ljf3fHIw82ID2Z9SlnbafBMGqcOd8gREtRL49ETgUNp+Dfst5d5V8wCOukybKs8IBVknTqKFeyQMZ/jifD5WIQr+fAaP3bp8Wx+PWAJljtSmz7tIdfudt+ETevfYnvjgNxHiWGsj+lUpScAgqOgdvtVneJc0EirIRrtVoh8NoZ31WEDkrc50xFS6sKXxxKgzoOSB0FpIz0v4yz65GW6MI/K9Lxj4PpbTtQEXsPZsBmV2KcMw1qyj0X4wHLcFCr1RHN54aV8IyMjCv83waFv8+/u+V907fu7YnGFhUYBlB287+6d3fh5SdroVZxeG1nNsoqk9t0XG9S493Pe/joE3FD4RAI79Wr17kwuBoQYSU8Ozv7qkKhsJhUVr8yfgk33pEOq12FNe/3gdMV+BRneK4Nq566gGH3WJGW5I3jdieDl9/tA7tTCYO9O8ZSKQMeJ9RCvsY5cODA/x/CExISnLm5ueVH1C0yhjAoahmGga54fHciCUtf7y+QGAgT8szYVHgeeYOtcLuB59frcfRsInJdiXjJnAsGvm2/0TTwo/tUVlbWzXD5K4ew7zSnTJnyQbW6BdcZ/7ASDxU23xyNkc4kHDuXgA/3ZQalk1+3Hz2XiGGuRGy8mSfMCTTMjAsHtQ24//77vwq1P51F2AmfPn36XoVW3bAj7pJsOb9k5Ecoj/JjybJ1pDhR413Xz7H1QTLnvwj5qNsVWBVuTJ48uThUftwuwk54SkqKbcaMGW/vibuK88pW2To9PDqoOQbWW8FlHtweb/iI9/hvK/g36e9xlzB06NB9+fn5VXdo/h0jIvnwuXPnrnOpmNY/J50CC49feSg/eticUAOr0mMrLCxcolKpIn7iHBHCc3Jy6pcuXTrvhNrCboqv7bJ+vtTW4VPdj+4FCxY8N2rUqJNd1lEnELEzzVmzZu2eOXPmqnfiL6JYdyXk+svVjViZdBLjJozfYTQa3wp5B7eJiJ7aL1u2bM3kyZPffDXxLLbG1cKDO3/jeR38yC5IPo7cEcO/XL169TMhMTZEiOinbmq1mnM6nc/odDrzps8+W35EfVP1J8tgZHlu7x/XmhROLEn6AQd1DRg7duwH69evn6vT6dggmoYNEf+2UKPR8LPmC8XFxVXr1q1b/6jmv71m3OoJrhOjXcynrE46DU2crs74hPHVefPmbdJqtVFFNkK8ILhjNDc3J2zbtm3xrl27lrMsm5agdWPWlHoMyXGgb4YTKfEewWCLncGVBg2OX9ThyNkEVJ1JgMutsBsMhm2FhYUvZmRk+G9lowRR+dlpXV1d+r59+x4pLy+fWl1dPcHhcHTnv39TEHO9sZ7hQ1LjoEGDvh83btxX06ZN+6hfv34RO1gIFlH/na/L5WIuXrzY+/Lly/rm5mYhFRgfH9/ct2/f8/3797/AzwORtzKGGGKIIYYYYoghhhg6BYbjuAIA/IlrFcMwe8TGHMflA3iM3G4lv/l6NQzDbJV2QukRyql7GlWknxo5IzmOK+L/MgxTKFNmBCB+I7eWYZhmaTveTlo3ZUMzwzBrZeTtQdQfWp85jqvkvCiiFKVyHGci8i2iw+S+iS+XdJxK5Dwek+iVQ5HEKMF4ql6BTLmfTZSco/uW0WeQ6GrPNhGVXeJzAMJFWaWkkxJpXSIvIvISGR27eYOI8VsoA4wBdPvokdTJp5wsCEQ4TzAlk3t4BmKTeLW1py5Dl/gsJZyqUCnzVGlH8im5z5MO9CAl+ndLiOSIHpNUv6S9kbLhMSnhgd6EQJC09wszofZZISngR4ORxK/5dJyEN7aWAhDjfAHVhje0lJ4DOgnR6FJygZL5gMRSMR5voeK6iN1Extszv5N2yPUXWp/p8EGPlHbq6+mnS40maYiQvl78VSTXB6XDQI0oUwd275axW/xtkhutAfS0O8JD7rNMoO/QWEqJaIQfOR1MIAVUPaNURyCHJPoL2tG/O1A7GT0dEh5Sn6lKWwJNlgGMbPJTJt95CTGWv3iS9JJ64qRkIm0qKcKDmTzpEdTuSqcdX4IhPDQ+04Fe8uq0O+FQjsq++oEmEEmdfK5j5Mu0abNRZtLsFOnBEh4qn30mTbI4n0QmTWMg0olh9KbodkFPlmmSy2/yJP1uoSYsv0mRbHDESbUg0GqnswiZzwHW4bLrWDIZFFGvfMDQE+QIDxirA8R2eoJPRfsbH3Ep1tQe6UEsC0Pqc3trR59XU2IYR+JUezGv3c7pXVw7OtoeiIRAPVVHlnD4zg9+e4oA7eV2kyHz2UdxO8akUvfiDi2o1zSImNjh0k0ykoOyM9iyINuH1OcYYoghhhhiiCGG6MQdf+pG1r78EVMVWRIZxV0ikYnLKfHUpYqkPEFtqgQZWV/Tuzk9pcdIjqsMVLmBT4+SPvSSVO1WYouIUqot/VusS+8k+V1sl/w/UCg+yDeSHLT4u4g4YyAElpB7cTOwhTryomU8aeIuTk90inrEFIOBXGL5FtKHmJ+Wyy4WSdpK5SJKAtQLKUL1HxCphESpwzxRsgfGFAyErHwy0teSHInodAE5BJbLX6wlfeSTfmpIe+GQWTw4pg6Q9dQDg+R3WDYsoSJ8D3G8lJIZCQnSE5H5YkghWEvapYpOS3ZrNWSUS2WPEyL1nUgmlVL9gUpyGcnvgAcvoUIoCYcMuT6fO5CRVyqpU0BGqBjXS8jrLZKxhxAqvvKl4ggmBw3NnSDcQPoT38QCIislsvmSQRN9EBNJVM5DT3ITbXL6ngbJbYuxXgC5FyZaOsdB6kpzO4KMupfrg7ZDPMLjbRT7btMv7TPkAPA/gCYZKfhWFvoAAAAASUVORK5CYII=" alt="logo" width="92" />
+        <p>
+          Кураж тур агентство, которое предоставляет услуги по помощи,
+          оформлению и подбору туров для вас и ваших родных.
+        </p>
+      </span>
+      <p>Создание сайта — <a href="index.html">Webakula</a></p>
+    </div>
+    <div class="footer-nav">
+      <h4>Навигация</h4>
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Туры</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">Услуги</a></li>
+      </ul>
+    </div>
+    <div class="footer-support">
+      <h4>Поддержка</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Блог</a></li>
+        <li><a href="#">Обратная связь</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Контакты</h4>
+      <p>г. Харьков, ул. Лермонтовская 10а</p>
+      <p>+38 (099) 990-81-00</p>
+      <div class="social-media">
+        <svg class="social-media-svg" width="33" height="33">
+          <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-facebook"></use>
+        </svg>
+
+        <svg class="social-media-svg" width="30" height="30">
+          <use href="/test/assets/symbol-defs-a7f464d2.svg#icon-instagram"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+</footer>
 
     
   </body>
