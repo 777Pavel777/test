@@ -1,0 +1,131 @@
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+}
+
+footer > .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+footer > .container div {
+  flex: 1;
+  margin: 10px;
+  min-width: 250px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-logo-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-logo-block img {
+  text-align: center;
+  width: 92px;
+  height: 92px;
+}
+
+.footer-logo-block p {
+  text-align: start;
+  margin: 5px 0;
+  padding: 20px 0;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+
+.footer-nav,
+.footer-contact,
+.footer-support {
+  text-align: center;
+}
+
+.footer-nav h4,
+.footer-support h4,
+.footer-contact h4 {
+  margin-bottom: 20px;
+}
+
+.footer-nav ul,
+.footer-support ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li,
+.footer-support ul li {
+  margin: 5px 0;
+}
+
+.footer-nav ul li a,
+.footer-support ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+.social-media-svg {
+  fill: #fff;
+}
+
+.social-media-svg:last-child {
+  fill: none;
+  stroke: #fff;
+}
+
+@media (max-width: 767px) {
+  footer > .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer > .container div {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  footer > .container {
+    flex-direction: row;
+    column-gap: 200px;
+    align-items: baseline;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  footer {
+    padding-top: 62px;
+  }
+  footer > .container {
+    flex-direction: row;
+    column-gap: 200px;
+    justify-content: space-between;
+  }
+
+  .footer-support {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  footer {
+    padding-top: 62px;
+  }
+  footer > .container {
+    justify-content: space-between;
+  }
+}
