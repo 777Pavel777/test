@@ -14,7 +14,9 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/test/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/test/assets/index-3e8f5cdf.css">
+    <link rel="modulepreload" crossorigin href="/test/assets/vendor-c0264615.js">
+    <link rel="stylesheet" href="/test/assets/vendor-b51df72b.css">
+    <link rel="stylesheet" href="/test/assets/index-40cfda0c.css">
   </head>
   <body>
     <header class="header">
@@ -71,11 +73,13 @@
             </a>
 
             <ul class="dropdown">
-              <li><a href="#">Горящие туры</a></li>
-              <li><a href="#">Поиск тура</a></li>
-              <li><a href="#">Туры по Украине</a></li>
-              <li><a href="#">Экскурсионные туры</a></li>
-              <li><a href="#">Week end туры</a></li>
+              <li class="header-team-link"><a href="#">Горящие туры</a></li>
+              <li class="header-team-link"><a href="#">Поиск тура</a></li>
+              <li class="header-team-link"><a href="#">Туры по Украине</a></li>
+              <li class="header-team-link">
+                <a href="#">Экскурсионные туры</a>
+              </li>
+              <li class="header-team-link"><a href="#">Week end туры</a></li>
             </ul>
           </li>
           <li class="header-menu-team"><a href="#">Страны</a></li>
@@ -88,12 +92,22 @@
             </a>
 
             <ul class="dropdown">
-              <li><a href="#">Авиабилеты</a></li>
-              <li><a href="#">Визовая поддержка</a></li>
-              <li><a href="#">Индивидуальный трансфер</a></li>
-              <li><a href="#">Подарочные сертификаты</a></li>
-              <li><a href="#">Бронирование отелей и апартаментов</a></li>
-              <li><a href="#">Как забронировать и оплатить тур</a></li>
+              <li class="header-team-link"><a href="#">Авиабилеты</a></li>
+              <li class="header-team-link">
+                <a href="#">Визовая поддержка</a>
+              </li>
+              <li class="header-team-link">
+                <a href="#">Индивидуальный трансфер</a>
+              </li>
+              <li class="header-team-link">
+                <a href="#">Подарочные сертификаты</a>
+              </li>
+              <li class="header-team-link">
+                <a href="#">Бронирование отелей и апартаментов</a>
+              </li>
+              <li class="header-team-link">
+                <a href="#">Как забронировать и оплатить тур</a>
+              </li>
             </ul>
           </li>
           <li class="header-menu-team"><a href="#">О компании</a></li>
@@ -162,181 +176,126 @@
 
     <main>
       <section class="tour">
-  <!-- <div class="tour-subtitle">
-    <p><a href="#">Горящие туры</a></p>
-    <p><a href="#">Популярные туры</a></p>
-  </div>
-  <div class="tour-carousel">
-    <div class="tour-card">
-      <div class="tour-image">
-        <img src="https://via.placeholder.com/150" alt="Cyrene Sharm Hotel" />
-      </div>
-      <div class="tour-details">
-        <h2>8 марта в Cyrene Sharm hotel</h2>
-        <p class="dates">(12.03.2018 — 19.03.2018)</p>
-        <p>Перелёт, питание по системе all inclusive, трансфер</p>
-        <div class="tour-price">
-          <span>1 259 грн</span>
-          <p class="per-person">/ за 1 человека</p>
-        </div>
-      </div>
-      <div class="tour-arrow">
-        <span>&#10140;</span>
-      </div>
-    </div>
-
-    <div class="tour-card">
-      <div class="tour-image">
-        <img src="https://via.placeholder.com/150" alt="Cyrene Sharm Hotel" />
-      </div>
-      <div class="tour-details">
-        <h2>8 марта в Cyrene Sharm hotel</h2>
-        <p class="dates">(12.03.2018 — 19.03.2018)</p>
-        <p>Перелёт, питание по системе all inclusive, трансфер</p>
-        <div class="tour-price">
-          <span>1 259 грн</span>
-          <p class="per-person">/ за 1 человека</p>
-        </div>
-      </div>
-      <div class="tour-arrow">
-        <span>&#10140;</span>
-      </div>
-    </div>
-
-    <div class="tour-card">
-      <div class="tour-image">
-        <img src="https://via.placeholder.com/150" alt="Cyrene Sharm Hotel" />
-      </div>
-      <div class="tour-details">
-        <h2>8 марта в Cyrene Sharm hotel</h2>
-        <p class="dates">(12.03.2018 — 19.03.2018)</p>
-        <p>Перелёт, питание по системе all inclusive, трансфер</p>
-        <div class="tour-price">
-          <span>1 259 грн</span>
-          <p class="per-person">/ за 1 человека</p>
-        </div>
-      </div>
-      <div class="tour-arrow">
-        <span>&#10140;</span>
-      </div>
-    </div>
-  </div> -->
   <div class="container">
     <div class="tours-header">
       <span class="hot-tours active">Горящие туры</span>
       <span class="popular-tours">Популярные туры</span>
     </div>
-    <div class="tours-container">
-      <div class="tour-card">
-        <div class="tour-image">
-          <img
-            srcset="/test/assets/beach-be80eec2.jpg 288w, /test/assets/beach@2x-4872ecd9.jpg 576w, /test/assets/beach-be80eec2.jpg 356w, /test/assets/beach@2x-4872ecd9.jpg 712w, /test/assets/beach-be80eec2.jpg 360w, /test/assets/beach@2x-4872ecd9.jpg 720w"
-            sizes="(min-width: 1280px) 360px, (min-width: 768px) 356px, (max-width: 767px) 288px "
-            src="/test/assets/beach-be80eec2.jpg"
-            alt="Cyrene Sharm Hotel"
-          />
-        </div>
-
-        <div class="tour-details">
-          <h2>8 марта в Cyrene Sharm hotel</h2>
-          <p class="dates">(12.03.2018 — 19.03.2018)</p>
-          <p>Перелёт, питание по системе all inclusive, трансфер</p>
-          <div class="tour-price">
-            <span>1 259 грн</span>
-            <p class="per-person">/ за 1 человека</p>
+    <div class="swiper mySwiper">
+      <ul class="tours-container swiper-wrapper">
+        <li class="tour-card swiper-slide">
+          <div class="tour-image">
+            <img
+              srcset="/test/assets/beach-be80eec2.jpg 288w, /test/assets/beach@2x-4872ecd9.jpg 576w, /test/assets/beach-be80eec2.jpg 356w, /test/assets/beach@2x-4872ecd9.jpg 712w, /test/assets/beach-be80eec2.jpg 360w, /test/assets/beach@2x-4872ecd9.jpg 720w"
+              sizes="(min-width: 1280px) 360px, (min-width: 768px) 356px, (max-width: 767px) 288px "
+              src="/test/assets/beach-be80eec2.jpg"
+              alt="Cyrene Sharm Hotel"
+            />
           </div>
-        </div>
-        <div class="tour-arrow">
-          <span>
-            <svg class="tour-arrow-svg" width="30" height="30">
-              <use href="/test/assets/symbol-defs-cc6b28c5.svg#icon-arrow"></use>
-            </svg>
-          </span>
-        </div>
-      </div>
 
-      <div class="tour-card">
-        <div class="tour-image">
-          <img
-            srcset="/test/assets/sea-3733d2e8.jpg 288w, /test/assets/sea@2x-fdeec1af.jpg 576w, /test/assets/sea-3733d2e8.jpg 356w, /test/assets/sea@2x-fdeec1af.jpg 712w, /test/assets/sea-3733d2e8.jpg 360w, /test/assets/sea@2x-fdeec1af.jpg 720w"
-            sizes="(min-width: 1280px) 360px, (min-width: 768px) 356px, (max-width: 767px) 288px "
-            src="../img/sea.jpg"
-            alt="Cyrene Sharm Hotel"
-          />
-        </div>
-        <div class="tour-details">
-          <h2>8 марта в Cyrene Sharm hotel</h2>
-          <p class="dates">(12.03.2018 — 19.03.2018)</p>
-          <p>Перелёт, питание по системе all inclusive, трансфер</p>
-          <div class="tour-price">
-            <span>1 259 грн</span>
-            <p class="per-person">/ за 1 человека</p>
+          <div class="tour-details">
+            <h2>8 марта в Cyrene Sharm hotel</h2>
+            <p class="dates">(12.03.2018 — 19.03.2018)</p>
+            <p>Перелёт, питание по системе all inclusive, трансфер</p>
+            <div class="tour-price">
+              <span>1 259 грн</span>
+              <p class="per-person">/ за 1 человека</p>
+            </div>
           </div>
-        </div>
-        <div class="tour-arrow">
-          <span>
-            <svg class="tour-arrow-svg" width="30" height="30">
-              <use href="/test/assets/symbol-defs-cc6b28c5.svg#icon-arrow"></use>
-            </svg>
-          </span>
-        </div>
-      </div>
+          <div class="tour-arrow">
+            <span>
+              <svg class="tour-arrow-svg" width="30" height="30">
+                <use href="/test/assets/symbol-defs-cc6b28c5.svg#icon-arrow"></use>
+              </svg>
+            </span>
+          </div>
+        </li>
 
-      <div class="tour-card">
-        <div class="tour-image">
-          <img
-            srcset="/test/assets/beach-be80eec2.jpg 288w, /test/assets/beach@2x-4872ecd9.jpg 576w, /test/assets/beach-be80eec2.jpg 356w, /test/assets/beach@2x-4872ecd9.jpg 712w, /test/assets/beach-be80eec2.jpg 360w, /test/assets/beach@2x-4872ecd9.jpg 720w"
-            sizes="(min-width: 1280px) 360px, (min-width: 768px) 356px, (max-width: 767px) 288px "
-            src="../img/beach.jpg"
-            alt="Cyrene Sharm Hotel"
-          />
-        </div>
-        <div class="tour-details">
-          <h2>8 марта в Cyrene Sharm hotel</h2>
-          <p class="dates">(12.03.2018 — 19.03.2018)</p>
-          <p>Перелёт, питание по системе all inclusive, трансфер</p>
-          <div class="tour-price">
-            <span>1 259 грн</span>
-            <p class="per-person">/ за 1 человека</p>
+        <li class="tour-card swiper-slide">
+          <div class="tour-image">
+            <img
+              srcset="/test/assets/sea-3733d2e8.jpg 288w, /test/assets/sea@2x-fdeec1af.jpg 576w, /test/assets/sea-3733d2e8.jpg 356w, /test/assets/sea@2x-fdeec1af.jpg 712w, /test/assets/sea-3733d2e8.jpg 360w, /test/assets/sea@2x-fdeec1af.jpg 720w"
+              sizes="(min-width: 1280px) 360px, (min-width: 768px) 356px, (max-width: 767px) 288px "
+              src="../img/sea.jpg"
+              alt="Cyrene Sharm Hotel"
+            />
           </div>
-        </div>
-        <div class="tour-arrow">
-          <span>
-            <svg class="tour-arrow-svg" width="30" height="30">
-              <use href="/test/assets/symbol-defs-cc6b28c5.svg#icon-arrow"></use>
-            </svg>
-          </span>
-        </div>
-      </div>
+          <div class="tour-details">
+            <h2>8 марта в Cyrene Sharm hotel</h2>
+            <p class="dates">(12.03.2018 — 19.03.2018)</p>
+            <p>Перелёт, питание по системе all inclusive, трансфер</p>
+            <div class="tour-price">
+              <span>1 259 грн</span>
+              <p class="per-person">/ за 1 человека</p>
+            </div>
+          </div>
+          <div class="tour-arrow">
+            <span>
+              <svg class="tour-arrow-svg" width="30" height="30">
+                <use href="/test/assets/symbol-defs-cc6b28c5.svg#icon-arrow"></use>
+              </svg>
+            </span>
+          </div>
+        </li>
 
-      <div class="tour-card">
-        <div class="tour-image">
-          <img
-            srcset="/test/assets/sea-3733d2e8.jpg 288w, /test/assets/sea@2x-fdeec1af.jpg 576w, /test/assets/sea-3733d2e8.jpg 356w, /test/assets/sea@2x-fdeec1af.jpg 712w, /test/assets/sea-3733d2e8.jpg 360w, /test/assets/sea@2x-fdeec1af.jpg 720w"
-            sizes="(min-width: 1280px) 360px, (min-width: 768px) 356px, (max-width: 767px) 288px "
-            src="../img/sea.jpg"
-            alt="Cyrene Sharm Hotel"
-          />
-        </div>
-        <div class="tour-details">
-          <h2>8 марта в Cyrene Sharm hotel</h2>
-          <p class="dates">(12.03.2018 — 19.03.2018)</p>
-          <p>Перелёт, питание по системе all inclusive, трансфер</p>
-          <div class="tour-price">
-            <span>1 259 грн</span>
-            <p class="per-person">/ за 1 человека</p>
+        <li class="tour-card swiper-slide">
+          <div class="tour-image">
+            <img
+              srcset="/test/assets/beach-be80eec2.jpg 288w, /test/assets/beach@2x-4872ecd9.jpg 576w, /test/assets/beach-be80eec2.jpg 356w, /test/assets/beach@2x-4872ecd9.jpg 712w, /test/assets/beach-be80eec2.jpg 360w, /test/assets/beach@2x-4872ecd9.jpg 720w"
+              sizes="(min-width: 1280px) 360px, (min-width: 768px) 356px, (max-width: 767px) 288px "
+              src="../img/beach.jpg"
+              alt="Cyrene Sharm Hotel"
+            />
           </div>
-        </div>
-        <div class="tour-arrow">
-          <span>
-            <svg class="tour-arrow-svg" width="30" height="30">
-              <use href="/test/assets/symbol-defs-cc6b28c5.svg#icon-arrow"></use>
-            </svg>
-          </span>
-        </div>
-      </div>
+          <div class="tour-details">
+            <h2>8 марта в Cyrene Sharm hotel</h2>
+            <p class="dates">(12.03.2018 — 19.03.2018)</p>
+            <p>Перелёт, питание по системе all inclusive, трансфер</p>
+            <div class="tour-price">
+              <span>1 259 грн</span>
+              <p class="per-person">/ за 1 человека</p>
+            </div>
+          </div>
+          <div class="tour-arrow">
+            <span>
+              <svg class="tour-arrow-svg" width="30" height="30">
+                <use href="/test/assets/symbol-defs-cc6b28c5.svg#icon-arrow"></use>
+              </svg>
+            </span>
+          </div>
+        </li>
+
+        <li class="tour-card swiper-slide">
+          <div class="tour-image">
+            <img
+              srcset="/test/assets/sea-3733d2e8.jpg 288w, /test/assets/sea@2x-fdeec1af.jpg 576w, /test/assets/sea-3733d2e8.jpg 356w, /test/assets/sea@2x-fdeec1af.jpg 712w, /test/assets/sea-3733d2e8.jpg 360w, /test/assets/sea@2x-fdeec1af.jpg 720w"
+              sizes="(min-width: 1280px) 360px, (min-width: 768px) 356px, (max-width: 767px) 288px "
+              src="../img/sea.jpg"
+              alt="Cyrene Sharm Hotel"
+            />
+          </div>
+          <div class="tour-details">
+            <h2>8 марта в Cyrene Sharm hotel</h2>
+            <p class="dates">(12.03.2018 — 19.03.2018)</p>
+            <p>Перелёт, питание по системе all inclusive, трансфер</p>
+            <div class="tour-price">
+              <span>1 259 грн</span>
+              <p class="per-person">/ за 1 человека</p>
+            </div>
+          </div>
+          <div class="tour-arrow">
+            <span>
+              <svg class="tour-arrow-svg" width="30" height="30">
+                <use href="/test/assets/symbol-defs-cc6b28c5.svg#icon-arrow"></use>
+              </svg>
+            </span>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </section>
 
       <section class="about-us">
@@ -433,19 +392,19 @@
     <div class="footer-nav">
       <h4>Навигация</h4>
       <ul>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">О компании</a></li>
-        <li><a href="#">Туры</a></li>
-        <li><a href="#">Контакты</a></li>
-        <li><a href="#">Услуги</a></li>
+        <li class="footer-team-link"><a href="#">Главная</a></li>
+        <li class="footer-team-link"><a href="#">О компании</a></li>
+        <li class="footer-team-link"><a href="#">Туры</a></li>
+        <li class="footer-team-link"><a href="#">Контакты</a></li>
+        <li class="footer-team-link"><a href="#">Услуги</a></li>
       </ul>
     </div>
     <div class="footer-support">
       <h4>Поддержка</h4>
       <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Блог</a></li>
-        <li><a href="#">Обратная связь</a></li>
+        <li class="footer-team-link"><a href="#">FAQ</a></li>
+        <li class="footer-team-link"><a href="#">Блог</a></li>
+        <li class="footer-team-link"><a href="#">Обратная связь</a></li>
       </ul>
     </div>
     <div class="footer-contact">
@@ -466,5 +425,6 @@
 </footer>
 
     
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   </body>
 </html>
