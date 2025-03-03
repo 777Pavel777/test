@@ -167,9 +167,17 @@
   }
 
   .dropdown a {
-    color: #fff;
     padding: 10px;
     display: block;
+  }
+
+  .header-team-link {
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .header-team-link:hover {
+    color: #cacaca;
   }
 
   .header-social {

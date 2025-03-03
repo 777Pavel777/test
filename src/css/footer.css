@@ -9,6 +9,8 @@ footer > .container {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 footer > .container div {
@@ -47,6 +49,12 @@ footer > .container div {
 .footer-contact,
 .footer-support {
   text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-contact:hover,
+.footer-support:hover {
+  color: #e4e3e3;
 }
 
 .footer-nav h4,
@@ -78,6 +86,12 @@ footer > .container div {
 
 .social-media-svg {
   fill: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-media-svg:hover {
+  transform: scale(1.1);
 }
 
 .social-media-svg:last-child {
@@ -126,5 +140,23 @@ footer > .container div {
   }
   footer > .container {
     justify-content: space-between;
+  }
+
+  .footer-team-link {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .footer-team-link:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer-team-link {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .footer-team-link:hover {
+    transform: scale(1.1);
   }
 }

@@ -1,25 +1,61 @@
-// const leftArrow = document.getElementById('left-arrow');
-// const rightArrow = document.getElementById('right-arrow');
-// const toursContainer = document.getElementById('tours-container');
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 
-// let currentIndex = 0;
-
-// function updateCarousel() {
-//   const cardWidth = toursContainer.querySelector('.tour-card').offsetWidth + 20;
-//   toursContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-// }
-
-// leftArrow.addEventListener('click', () => {
-//   if (currentIndex > 0) {
-//     currentIndex--;
-//     updateCarousel();
-//   }
+// document.addEventListener('DOMContentLoaded', () => {
+//   const tourSliderEl = document.querySelector('.tours-container');
+//   const tourSliderProps = {
+//     speed: 900,
+//     spaceBetween: 30,
+//     slidesPerView: 2,
+//     allowTouchMove: true,
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+//     keyboard: {
+//       enabled: true,
+//       onlyInViewport: false,
+//     },
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true,
+//     },
+//   };
+//   const tourSlider = new Swiper(tourSliderEl, tourSliderProps);
 // });
 
-// rightArrow.addEventListener('click', () => {
-//   const maxIndex = toursContainer.children.length - 2;
-//   if (currentIndex < maxIndex) {
-//     currentIndex++;
-//     updateCarousel();
-//   }
-// });
+const reviewsSliderElement = document.querySelector('.mySwiper');
+const reviewsSliderProps = {
+  speed: 900,
+  allowTouchMove: false,
+  loop: true,
+  simulateTouch: true,
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+    },
+
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+
+    1280: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+  },
+};
+
+const reviewsSlider = new Swiper(reviewsSliderElement, reviewsSliderProps);
