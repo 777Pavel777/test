@@ -47,7 +47,7 @@ class User {
   }
 }
 
-const SERVER_URL = 'https://user-server-backend-99yi.onrender.com/api/users';
+const SERVER_URL = 'https://user-server-backend-99yi.onrender.com';
 
 // Завантаження та відображення користувачів
 async function fetchUsers() {
